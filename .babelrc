@@ -1,0 +1,16 @@
+{
+  "presets": ["react", "es2015", "stage-1"],
+  "env": {
+    "production": {
+      "plugins": ["transform-react-constant-elements", "transform-react-remove-prop-types", "transform-react-pure-class-to-function"],
+      "presets": ["react", "es2015", "stage-1"]
+    }
+  },
+  "plugins": [
+    ["module-alias", [
+      {"src": "./src", "expose": "src"},
+      {"src": "./configs", "expose": "configs"},
+      {"server": "./server", "expose": "configs"}
+    ]]
+  ]
+}
